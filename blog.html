@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Phoebe's Life Journey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-nav">Phoebe's Life Journey</div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="blog-page">
+        <div class="container">
+            <h1 class="page-title">Chapters of My Life</h1>
+
+            <div class="albums-grid" id="albumsGrid">
+                <!-- Albums will be dynamically loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Album View Modal -->
+    <div class="modal" id="albumModal">
+        <div class="modal-content album-view">
+            <div class="modal-header">
+                <h2 id="albumTitle"></h2>
+                <div class="modal-actions">
+                    <button class="subscribe-btn" id="subscribeBtn">
+                        <span class="icon">🔔</span>
+                        <span class="text">Subscribe</span>
+                    </button>
+                    <button class="close-btn" id="closeAlbumModal">&times;</button>
+                </div>
+            </div>
+            <div class="photos-grid" id="photosGrid">
+                <!-- Photos will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Detail Modal -->
+    <div class="modal" id="photoModal">
+        <div class="modal-content photo-detail">
+            <button class="close-btn" id="closePhotoModal">&times;</button>
+            <div class="photo-detail-content">
+                <div class="photo-main">
+                    <img id="mainPhoto" src="" alt="">
+                    <button class="like-btn" id="likeBtn">
+                        <span class="icon">❤</span>
+                        <span class="count" id="likeCount">0</span>
+                    </button>
+                </div>
+                <div class="photo-info">
+                    <h3 id="photoTitle"></h3>
+                    <p class="photo-date" id="photoDate"></p>
+                    <p class="photo-description" id="photoDescription"></p>
+
+                    <div class="additional-photos" id="additionalPhotos">
+                        <!-- Additional photos will be loaded here -->
+                    </div>
+
+                    <div class="share-section">
+                        <label>Share this memory:</label>
+                        <div class="share-link">
+                            <input type="text" id="shareLink" readonly>
+                            <button class="copy-btn" id="copyLinkBtn">Copy Link</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Phoebe's Life Journey. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
